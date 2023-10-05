@@ -15,18 +15,17 @@ public class Main {
 
         String productEntered = cost.nextLine();
 
-        if (productEntered.equals("Rice")) {
-            price = 5;
-        } else if (productEntered.equals("rice")) {
-            price = 5;
-        } else if (productEntered.equals("Corn")) {
-            price = 7;
-        } else if (productEntered.equals("corn")) {
-            price = 7;
-        } else if (productEntered.equals("Beans")) {
-            price = 2;
-        } else if (productEntered.equals("beans")) {
-            price = 2;
+        switch (productEntered) {
+            case "Rice" -> price = 5;
+            case "rice" -> price = 5;
+            case "Corn" -> price = 7;
+            case "corn" -> price = 7;
+            case "Beans" -> price = 2;
+            case "beans" -> price = 2;
+            default -> {
+                System.out.println("We do not have that product");
+                System.exit(0);
+            }
         }
 
         System.out.println("How many pounds do you want? (Insert Number)");
